@@ -2,8 +2,8 @@ package lesson10;
 
 public abstract class Predator {
 
-    protected Color color;
-    protected int weight;
+    private final Color color;
+    private final int weight;
 
     protected Predator(Color color, int weight) {
         this.color = color;
