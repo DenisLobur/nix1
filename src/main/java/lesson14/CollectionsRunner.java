@@ -1,5 +1,11 @@
 package lesson14;
 
+import lesson14.comparators.CapacityComparator;
+import lesson14.comparators.Car;
+import lesson14.comparators.YearComparator;
+import lesson14.iterators.Range;
+import lesson14.iterators.RangeWithStep;
+
 import java.util.*;
 
 public class CollectionsRunner {
@@ -20,5 +26,17 @@ public class CollectionsRunner {
         carsSet.add(new Car(2022, 2.5));
         carsSet.add(new Car(2002, 1.5));
         System.out.println("Sorting by growing capacity: " + carsSet);
+
+        Range range = new Range(9, 2);
+        System.out.println("Looping through Range [9..2)");
+        for (Integer integer : range) {
+            System.out.println(integer);
+        }
+
+        RangeWithStep rangeWithStep = new RangeWithStep(1, 10, 3);
+        System.out.println("Looping through RangeWithStep [1..10) step: 3");
+        for (Integer integer : rangeWithStep) {
+            System.out.println(integer);
+        }
     }
 }

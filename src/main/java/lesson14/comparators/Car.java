@@ -1,4 +1,4 @@
-package lesson14;
+package lesson14.comparators;
 
 public class Car {
     private final int yearOfManufacture;

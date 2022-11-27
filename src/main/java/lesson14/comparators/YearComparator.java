@@ -1,4 +1,6 @@
-package lesson14;
+package lesson14.comparators;
+
+import lesson14.comparators.Car;
 
 import java.util.Comparator;
 
