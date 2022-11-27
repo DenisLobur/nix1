@@ -33,8 +33,8 @@ public class CollectionsRunner {
             System.out.println(integer);
         }
 
-        RangeWithStep rangeWithStep = new RangeWithStep(1, 10, 3);
-        System.out.println("Looping through RangeWithStep [1..10) step: 3");
+        RangeWithStep rangeWithStep = new RangeWithStep(1, 10, 2);
+        System.out.println("Looping through RangeWithStep [1..10) step: 2");
         for (Integer integer : rangeWithStep) {
             System.out.println(integer);
         }

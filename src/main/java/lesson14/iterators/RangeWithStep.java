@@ -3,7 +3,7 @@ package lesson14.iterators;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class RangeWithStep extends Range implements Iterable<Integer> {
+public class RangeWithStep extends Range {
     private final int step;
 
     public RangeWithStep(int start, int end, int step) {
