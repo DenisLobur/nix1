@@ -15,8 +15,10 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class FileWorker {
-    private static final String PATH_TO_DIR = "src/main/java/lesson17/output";
+    public static final String PATH_TO_DIR = "src/main/java/lesson17/output";
     public static final String PATH_TO_FILE = PATH_TO_DIR + "/result.csv";
+
+    public static final String PATH_TO_IMAGE = "output.jpg";
     public static final String IMAGE_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFtIiwbQLKvRRQn_06612_CSC84SsKQTbvoQ&usqp=CAU";
 
     public void createEmptyDirectory() {
@@ -49,6 +51,15 @@ public class FileWorker {
         Path result = Paths.get(PATH_TO_FILE);
         try {
             Files.write(result, people);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void clean() {
+        Path output = Paths.get(PATH_TO_IMAGE);
+        try {
+            Files.delete(output);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
