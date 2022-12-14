@@ -1,5 +1,7 @@
 package lesson16;
 
+import java.util.Locale;
+
 public class Person {
     private final String name;
     private final int age;
@@ -30,6 +32,10 @@ public class Person {
                 ", age: " + age +
                 ", sex:" + sex +
                 ")";
+    }
+
+    public String toCSVFormat() {
+        return name + ", " + age + ", " + sex.toString().toLowerCase(Locale.ROOT);
     }
 
     @Override
